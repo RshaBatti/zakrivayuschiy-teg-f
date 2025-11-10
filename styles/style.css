@@ -276,6 +276,38 @@ body:has(dialog[open]) {
 }
 }
 
+.preparing {
+   filter: grayscale(1);
+}
+
+.blank {
+ filter: saturate(105%) blur(0.1rem);
+}
+
+.roller {
+  filter: brightness(145%);
+}
+
+.perfect {
+   filter: invert(0.8);
+}
+
+.embrace {
+  filter: drop-shadow(5px 15px 3px rgba(0, 0, 0, 0.8)) contrast(1) hue-rotate(-110deg);
+}
+
+.strategy {
+  filter: saturate(130%);
+}
+
+.dizziness {
+   filter: hue-rotate(-105deg);
+}
+
+.samurai {
+  filter: contrast(170%);
+}
+
 
 .card__like-button,
 .card__memory-button,
