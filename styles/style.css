@@ -9,6 +9,8 @@
 
 */
 
+
+
 .page {
   min-inline-size: 320px;
   block-size: 100%;
@@ -32,13 +34,17 @@
   font-family: var(--accent-font-family), 'Neucha';
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 100%;
+ 
 }
 
 .header-title_HTML {
   font-size: var(--header-logo-size);
-  line-height: 49px;
+  line-height: 1;
   margin-block-end: 20px;
+  display: block;
 }
+
 
 .content {
   display: grid;
@@ -53,8 +59,8 @@
 
 .header-title {
   font-size: var(--header-title-size);
-  font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
+  display: block;
 }
 
 .title-block {
@@ -105,28 +111,184 @@
   justify-content: center;
   align-items: center;
   border: 2px solid #000000;
-  font-family: var(--accent-font-family), 'Neucha';
-  font-size: 14px;
-  line-height: 90%;
 }
 
 .card__memory-button {
-  font-family: var(--accent-font-family), 'Neucha';
-  font-size: 14px;
-  line-height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   padding: 12px 17px 14px;
   border: 2px solid #000000;
-  margin: 50px 34.5px 100px;
-  white-space: nowrap
+  margin: 0 34.5px 100px;
+  white-space: nowrap;
+  background-color: #FFF;
+}
+
+
+
+.button__text {
+  font-family: var(--accent-font-family), 'Neucha';
+  font-size: 14px;
+  line-height: 90%;
+    position: relative;
+  z-index: 1; 
 }
 
 .save-icon {
   display: block;
-  width: 28px;
-  height: 28x;
+  width: 21px;
+  height: 21px;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
+
+
+.card_image {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  mix-blend-mode: hard-light;
+  font-family: var(--accent-font-family), 'Neucha';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #FFF;
+  opacity: 0.5;
+  text-shadow:
+    1px 0 var(--label-stroke),
+    -1px 0 var(--label-stroke),
+    0 1px var(--label-stroke),
+    0 -1px var(--label-stroke);
+}
+
+@supports ((-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000)) {
+  .label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-stroke);
+    text-stroke: 1px var(--label-stroke);
+  }
+}
+
+.label-white {
+  color: #000;
+  opacity: 0.5;
+  text-shadow:
+    1px 0 var(--label-white-stroke),
+    -1px 0 var(--label-white-stroke),
+    0 1px var(--label-white-stroke),
+    0 -1px var(--label-white-stroke);
+}
+
+@supports ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
+  .label-white {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-white-stroke);
+    text-stroke: 1px var(--label-white-stroke);
+  }
+}
+
+
+.dialog {
+  display: none;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: var(--accent-font-family, monospace);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.dialog[open] {
+  display: block;
+  max-width: 341px;
+  padding: 30px 40px;
+  position: fixed;
+  margin-block-end: 270px;
+  margin-inline: 17px;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  inset: 0px;
+}
+
+.dialog__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__text {
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.save-icon_open {
+  width: 39px;
+  height: 39px;
+}
+
+.dialog__button {
+  border: 2px solid #000;
+  background: #fff;
+  padding: 12.5px 116.5px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+@media (min-width: 376px) {
+  .card__memory-button {
+    margin-inline: auto; 
+    display: flex;
+    justify-content: center;
+    padding: 20.5px 20px;
+    flex-direction:row;
+  }
+  
+.dialog[open] {
+  max-width: 353px;
+  padding: 30px;
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%)
+}
+}
+
+
+.card__like-button,
+.card__memory-button {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFF;
+}
+
+.card__like-button:focus,
+.card__memory-button:focus,
+.dialog__button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 #000;
+  transition: box-shadow 0.3s ease;
+}
+
