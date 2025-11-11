@@ -49,6 +49,7 @@
 .content {
   display: grid;
   gap: 50px;
+  flex-wrap:wrap;
 }
 
 .blocks {
@@ -80,7 +81,6 @@
   padding: 22px 25px 25px;
   display: grid;
   gap: 25px;
-  grid-template-rows: 2fr 1fr;
   font-size: var(--main-text-size);
   align-content: start;
 }
