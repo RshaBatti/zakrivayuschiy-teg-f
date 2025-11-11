@@ -31,7 +31,7 @@
   margin-block-end: 98px;
   padding-block: var(--header-padding-block);
   text-align: center;
-  font-family: var(--accent-font-family), 'Neucha';
+  font-family: var(--accent-font-family), fantasy;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 100%;
@@ -80,7 +80,7 @@
   padding: 22px 25px 25px;
   display: grid;
   gap: 25px;
-  grid-template-rows: 2fr, 1fr;
+  grid-template-rows: 2fr 1fr;
   font-size: var(--main-text-size);
   align-content: start;
 }
@@ -128,7 +128,7 @@
 
 
 .button__text {
-  font-family: var(--accent-font-family), 'Neucha';
+  font-family: var(--accent-font-family), fantasy;
   font-size: 14px;
   line-height: 90%;
   position: relative;
@@ -154,7 +154,7 @@
   inset-inline-end: 25px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
-  font-family: var(--accent-font-family), 'Neucha';
+  font-family: var(--accent-font-family), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
