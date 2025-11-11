@@ -1,1 +1,1 @@
-https://github.com/RshaBatti/slozhno-sosredotochitsya-fd
+[https://github.com/RshaBatti/slozhno-sosredotochitsya-fd](https://rshabatti.github.io/zakrivayuschiy-teg-f/)
