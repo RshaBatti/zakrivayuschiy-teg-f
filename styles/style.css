@@ -123,6 +123,7 @@
   padding: 12px 17px 14px;
   margin: 0 34.5px 100px;
   white-space: nowrap;
+  background-color: var(--bg-color);
 }
 
 
@@ -227,6 +228,7 @@ body:has(dialog[open]) {
 .save-icon_open {
   width: 39px;
   height: 39px;
+  flex-shrink: 0;
 }
 
 .dialog__button {
@@ -241,7 +243,6 @@ body:has(dialog[open]) {
     flex-direction: row;
   }
 
-
   .dialog[open] {
     max-width: 353px;
     padding: 30px;
@@ -250,7 +251,7 @@ body:has(dialog[open]) {
     transform: translate(-50%, -50%);
     text-transform: uppercase;
 }
-
+}
 
 .filter-grayscale {
   filter: grayscale(1);
@@ -324,6 +325,7 @@ body:has(dialog[open]) {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 .card__icon-button:focus {
