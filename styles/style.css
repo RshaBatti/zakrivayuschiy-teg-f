@@ -46,10 +46,6 @@
 }
 
 
-.content {
-  flex-wrap: wrap;
-}
-
 .blocks {
   background-color: #FFF;
   width: var(--blocks-width);
@@ -95,6 +91,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
+  gap: 3px;
 }
 
 .button {
@@ -119,10 +116,11 @@
 
 .card__memory-button {
   gap: 8px;
-  padding: 12px 17px 14px;
-  margin: 50px 34.5px 100px;
+  padding: 17px 20px;
+  margin: 50px auto;
   white-space: nowrap;
   background-color: var(--bg-color);
+  flex-direction: column;
 }
 
 
@@ -136,8 +134,8 @@
 
 .save-icon {
   display: block;
-  width: 21px;
-  height: 21px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -247,6 +245,12 @@ body:has(dialog[open]) {
     padding: 30px;
     text-transform: uppercase;
 }
+
+.save-icon {
+  width: 21px;
+  height: 21px;
+}
+
 }
 
 .filter-grayscale {
@@ -321,11 +325,11 @@ body:has(dialog[open]) {
 .card__icon-button {
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
-  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--bg-color);
+  padding: 0;
 }
 
 .card__icon-button:focus {
