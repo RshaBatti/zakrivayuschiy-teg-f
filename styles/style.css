@@ -47,8 +47,6 @@
 
 
 .content {
-  display: grid;
-  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -79,7 +77,9 @@
   object-position: top center;
 }
 
-
+.content-section:not(:first-child) {
+  margin-top: 50px;
+}
 
 
 .text-block {
@@ -95,7 +95,6 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 12px;
 }
 
 .button {
@@ -121,7 +120,7 @@
 .card__memory-button {
   gap: 8px;
   padding: 12px 17px 14px;
-  margin: 0 34.5px 100px;
+  margin: 50px 34.5px 100px;
   white-space: nowrap;
   background-color: var(--bg-color);
 }
@@ -239,16 +238,13 @@ body:has(dialog[open]) {
   .card__memory-button {
     margin-inline: auto;
     justify-content: center;
-    padding: 20.5px 20px;
+    padding: 15px 20px;
     flex-direction: row;
   }
 
   .dialog[open] {
     max-width: 353px;
     padding: 30px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-transform: uppercase;
 }
 }
@@ -316,6 +312,10 @@ body:has(dialog[open]) {
   color: var(--bg-color);
   mix-blend-mode: difference;
   fill: var(--bg-color);
+}
+
+.button__text-open {
+  text-transform: uppercase;
 }
 
 .card__icon-button {
